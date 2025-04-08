@@ -2,13 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="0;url=games/games/index.html">
-    <title>Redirecting...</title>
+    <title>Game Portal - Redirecting...</title>
     <script>
-        window.location.href = "games/games/index.html";
+        // Correctly adjust paths based on where the site is hosted
+        const basePath = window.location.pathname.split('/').slice(0, -1).join('/');
+        window.location.href = `${basePath}/games/games/index.html`;
     </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .redirect-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="games/games/index.html">link to the games</a>.</p>
+    <div class="container">
+        <h1>Game Portal</h1>
+        <p>You are being redirected to the games collection...</p>
+        <p>If you are not redirected automatically, please click the link below:</p>
+        <a href="games/games/index.html" class="redirect-link">Go to Games</a>
+    </div>
 </body>
 </html> 
